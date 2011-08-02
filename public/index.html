@@ -36,7 +36,7 @@
     <script type="application/javascript">
     jQuery(function() {
       window.messages.fetch();
-      if (sessionStorage.getItem('chat.username') == "null") {
+      if ((sessionStorage.getItem('chat.username') == "null") || (sessionStorage.getItem('chat.username') == null)) {
         var username = prompt("Enter a username", "");
         sessionStorage.setItem('chat.username', username);
       }
