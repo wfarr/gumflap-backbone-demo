@@ -25,6 +25,7 @@ GEM
       addressable (~> 2.2.6)
     mime-types (1.16)
     multi_json (1.0.3)
+    pg (0.11.0)
     pusher (0.8.2)
       crack (~> 0.1.0)
       multi_json (~> 1.0)
@@ -52,6 +53,7 @@ DEPENDENCIES
   activerecord (~> 3.0.0)
   heroku
   json_pure (~> 1.5.3)
+  pg
   pusher
   rake
   sinatra (~> 1.2.3)
