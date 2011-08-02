@@ -1,10 +1,10 @@
 body {
   font-family: "Helvetica", "Arial", "sans"
-  font-size: 24px;
+  font-size: 36px;
 }
 
 #container {
-  width: 460px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
