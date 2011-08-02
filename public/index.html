@@ -1,0 +1,58 @@
+<!doctype html>
+
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+
+    <title>Backbone Gumflap</title>
+    <meta name="author" content="Will Farrington <will@railsmachine.com>">
+
+    <link rel="stylesheet" href="style/screen.css" media="screen, projection">
+    <link rel="stylesheet" href="style/fancypants.css" media="screen, projection">
+
+    <script src="js/vendor/modernizr-1.6.min.js"></script>
+    <script src="js/vendor/jquery-1.5.1.min.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/backbone.js"></script>
+    <script src="js/Gumflap.js"></script>
+    <script src="http://js.pusherapp.com/1.8/pusher.min.js"></script>
+
+    <script type="text/template" id="chat-template">
+      <h1>Flap Your Gums</h1>
+      <ul class="messages">
+      </ul>
+      <input type="text" class="message-input" placeholder="Type your message here..." autofocus />
+    </script>
+
+    <script type="text/template" id="message-template">
+    <span class="message-username"><%= username %></span>
+    <span class="message-body"><%= body %></span>
+    </script>
+
+    <script type="application/javascript">
+    jQuery(function() {
+      window.messages.fetch();
+      if (sessionStorage.getItem('chat.username') == "null") {
+        var username = prompt("Enter a username", "");
+        sessionStorage.setItem('chat.username', username);
+      }
+      // pusher
+      var pusher = new Pusher('11e41d2376a5e674b676');
+      var channel = pusher.subscribe('test_channel');
+      channel.bind('new_message', function(data) {
+        window.messages.fetch();
+      });
+    });
+    </script>
+
+  </head>
+
+  <body>
+    <div id="container">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", "Calibri", "sans"
+}
+
+#container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.chat {
+  width: 100%;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 48px;
+}
+
+ul.messages {
+  width: 100%;
+  list-style-type: none;
+}
+
+li.message {
+  width: 100%;
+}
+
+span.message-username {
+  color: #666;
+  margin-right: 5%;
+  width: 15%;
+}
+
+span.message-body {
+  width: 75%;
+}
+
+input.message-input {
+  width:100%;
+}
