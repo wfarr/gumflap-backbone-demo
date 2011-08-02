@@ -1,5 +1,6 @@
 body {
-    font-family: "Helvetica", "Arial", "sans"
+  font-family: "Helvetica", "Arial", "sans"
+  font-size: 18px;
 }
 
 #container {
@@ -38,4 +39,5 @@ span.message-body {
 
 input.message-input {
   width:100%;
+  line-height: 32px;
 }
