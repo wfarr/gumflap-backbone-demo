@@ -1,5 +1,6 @@
 body {
     font-family: "Helvetica Neue", "Helvetica", "Calibri", "sans"
+    font-size: 22px;
 }
 
 #container {
@@ -34,8 +35,10 @@ span.message-username {
 
 span.message-body {
   width: 75%;
+  float: right;
 }
 
 input.message-input {
   width:100%;
+  font-size: 18px;
 }
