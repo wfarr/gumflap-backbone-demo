@@ -29,12 +29,11 @@ li.message {
 
 span.message-username {
   color: #666;
-  margin-right: 5%;
   width: 15%;
 }
 
 span.message-body {
-  width: 75%;
+  width: 85%;
   float: right;
 }
 
