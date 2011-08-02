@@ -9,7 +9,7 @@ Bundler.require
 
 require 'uri'
 
-db = URI.parse(ENV['DATABASE_URL'] || "sqlite3:///#{Dir.pwd}/gumflap.sqlite3")
+db = URI.parse(ENV['DATABASE_URL'])
 
 ActiveRecord::Base.establish_connection(
   :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
